@@ -1,6 +1,26 @@
 import React from 'react';
+import Search from './components/search';
+import Information from './components/information';
+import History from './components/history';
+// import axios from 'axios';
 
+// const myKey = process.env.API_KEY;
+// console.log(myKey);
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: []
+    };
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    // dispatch something
+    const { name, alive } = this.state;
+    this.props.addCity(name);
+    this.setState({ name: '' });
+  }
+
   render() {
     return (
       <div className='container'>
@@ -8,40 +28,15 @@ export default class App extends React.Component {
           <h1 className='display-4'>Origin Weather Application</h1>
           <p className='lead'>{"Always know if you'll need an umbrella"}</p>
         </div>
-        <form onSubmit={ this.handleSubmit }>
-          <div className='btn-group' role='group' aria-label='Basic example'>
-            <button type='button' className='btn btn-primary'>
-              San Diego
-            </button>
-            <button type='button' className='btn btn-primary'>
-              New York
-            </button>
-            <button type='button' className='btn btn-primary'>
-              Washington DC
-            </button>
-            <button type='button' className='btn btn-primary'>
-              London
-            </button>
-            <button type='button' className='btn btn-primary'>
-              Tokyo
-            </button>
+        <div>
+          <Search />
+        </div>
+        <div className='row'>
+          <div className='col'>
+            <Information />
           </div>
-
-          <div className='input-group mb-3'>
-            <input
-              type='text'
-              className='form-control'
-              placeholder='Click on a city above, or input a city here, and click go!'
-              aria-label='City Name'
-              aria-describedby='basic-addon2'
-            />
-            <div className='input-group-append'>
-              <button className='btn btn-outline-secondary' type='button'>
-                Go!
-              </button>
-            </div>
-          </div>
-        </form>
+          <History />
+        </div>
       </div>
     );
   }

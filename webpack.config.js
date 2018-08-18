@@ -1,7 +1,10 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   context: path.join(__dirname, '/src'),
+
+  plugins: [new Dotenv()],
 
   entry: {
     javascript: './js/index'
@@ -9,7 +12,7 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/dist')
   },
 
   resolve: {
@@ -24,12 +27,12 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        loaders: ['babel-loader']
       },
       {
         test: /\.html$/,
-        loader: 'file?name=[name].[ext]',
-      },
-    ],
-  },
+        loader: 'file?name=[name].[ext]'
+      }
+    ]
+  }
 };
