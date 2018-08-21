@@ -1,6 +1,10 @@
 const initialState = {
   all: [],
-  selected: {}
+  selected: {
+    coord: {},
+    main: {},
+    wind: {}
+  }
 };
 
 // first arg state second action
