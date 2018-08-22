@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { searchCity, searchCitySubmit } from './searchAction';
+import { searchCitySubmit } from './searchAction';
 
 export default class Search extends React.Component {
   constructor(props) {

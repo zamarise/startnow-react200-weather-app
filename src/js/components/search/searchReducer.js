@@ -3,7 +3,8 @@ const initialState = {
   selected: {
     coord: {},
     main: {},
-    wind: {}
+    wind: {},
+    weather: [{ icon: '' }]
   }
 };
 
