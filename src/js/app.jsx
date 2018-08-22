@@ -2,10 +2,7 @@ import React from 'react';
 import Search from './components/search';
 import Information from './components/information';
 import History from './components/history';
-// import axios from 'axios';
 
-// const myKey = process.env.API_KEY;
-// console.log(myKey);
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -13,13 +10,13 @@ export default class App extends React.Component {
       name: []
     };
   }
-  handleSubmit(e) {
-    e.preventDefault();
-    // dispatch something
-    const { name, alive } = this.state;
-    this.props.addCity(name);
-    this.setState({ name: '' });
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   // dispatch something
+  //   const { name, alive } = this.state;
+  //   this.props.addCity(name);
+  //   this.setState({ name: '' });
+  // }
 
   render() {
     return (
