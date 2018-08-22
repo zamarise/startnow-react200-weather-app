@@ -4,6 +4,7 @@ const initialState = {
     coord: {},
     main: {},
     wind: {},
+    dt: null,
     weather: [{ icon: '' }]
   }
 };

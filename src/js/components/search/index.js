@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import search from './search';
+import search from './Search';
 
 function mapStoreToProps(store) {
   return {

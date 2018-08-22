@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import history from './history';
+import history from './History';
 
 function mapStoreToProps(store) {
   return {

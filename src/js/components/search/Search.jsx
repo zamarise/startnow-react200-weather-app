@@ -57,10 +57,10 @@ export default class Search extends React.Component {
             type='button'
             className='btn btn-primary'
             name='name'
-            value='WashingtonDC'
+            value='Washington, D.C'
             onClick={ this.handleChange }
           >
-            Washington DC
+            Washington D.C
           </button>
           <button
             type='button'
