@@ -10,13 +10,6 @@ export default class App extends React.Component {
       name: []
     };
   }
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   // dispatch something
-  //   const { name, alive } = this.state;
-  //   this.props.addCity(name);
-  //   this.setState({ name: '' });
-  // }
 
   render() {
     return (
