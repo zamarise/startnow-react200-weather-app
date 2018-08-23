@@ -1,4 +1,5 @@
 import React from 'react';
+import { randomBytes } from 'crypto';
 
 export default class Information extends React.Component {
   render() {
@@ -8,16 +9,14 @@ export default class Information extends React.Component {
         <div className='card-body'>
           <table className='table table-striped'>
             <thead>
-              <tr>
-                <th>Name</th>
-                <th>Timestamp</th>
-              </tr>
+              <tr>{/* <th>Name</th>
+                <th>Timestamp</th> */}</tr>
             </thead>
             <tbody>
-              {this.props.history.map(item => (
-                <tr key={ item.id }>
+              {this.props.history.map((item, index) => (
+                <tr key={ index }>
                   <td>{item.name}</td>
-                  <td>{Date(item.dt)}</td>
+                  <td>{new Date(item.dt * 1000).toLocaleString('en-US', { hour12: false })}</td>
                 </tr>
               ))}
             </tbody>

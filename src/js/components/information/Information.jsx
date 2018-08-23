@@ -47,7 +47,7 @@ export default class Information extends React.Component {
               {information.name && (
                 <strong>
                   Pressure
-                  <p className='text-success'>{information.main.pressure}F</p>
+                  <p className='text-success'>{information.main.pressure}</p>
                 </strong>
               )}
             </div>
