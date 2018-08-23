@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const myKey = process.env.API_KEY;
+const API_KEY = process.env.API_KEY;
 
 export function searchCitySubmit(name) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&units=imperial&appid=${myKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&units=imperial&appid=${API_KEY}`;
 
   const promise = axios.get(url);
 
