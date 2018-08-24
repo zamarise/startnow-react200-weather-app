@@ -1,10 +1,12 @@
+require('dotenv').config();
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const { EnvironmentPlugin } = require('webpack');
 
 module.exports = {
   context: path.join(__dirname, '/src'),
 
-  plugins: [new Dotenv()],
+  plugins: [new Dotenv(), new EnvironmentPlugin({ ...process.env })],
 
   entry: {
     javascript: './js/index'
