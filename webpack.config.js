@@ -34,5 +34,12 @@ module.exports = {
         loader: 'file?name=[name].[ext]'
       }
     ]
+  },
+
+  node: {
+    console: false,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 };
