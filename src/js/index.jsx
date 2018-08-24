@@ -1,9 +1,11 @@
 import React from 'react';
+import dotenv from 'dotenv';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './app';
 import store from './rootStore';
-import dotenv from 'dotenv';
+
+dotenv.config();
 
 render(
   <Provider store={ store }>
